@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zc_10sdp">10dp</dimen>
+    <dimen name="zc_74sdp">74dp</dimen>
+    <dimen name="zc_8sdp">8dp</dimen>
+    <dimen name="zc_5sdp">5dp</dimen>
+    <dimen name="zc_25sdp">25dp</dimen>
+    <dimen name="zc_92sdp">92dp</dimen>
+</resources>

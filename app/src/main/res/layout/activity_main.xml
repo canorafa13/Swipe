@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#FF0"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guia"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container2"
+            android:theme="@style/Theme.SwipeRevealApp.Above"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guia"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+            <Button
+                android:id="@+id/hide"
+                android:text="Ocultar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:fitsSystemWindows="true"
+        android:id="@+id/container1"
+        android:background="#FFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <Button
+            android:id="@+id/show"
+            android:text="Mostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+        <mx.swipe.app.customviews.TagView
+            android:id="@+id/zTag"
+            android:layout_margin="@dimen/zc_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/show"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            app:layout_constraintTop_toBottomOf="@+id/zTag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

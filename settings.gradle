@@ -1,0 +1,3 @@
+rootProject.name = "SwipeRevealApp"
+include ':app'
+include ':views'
